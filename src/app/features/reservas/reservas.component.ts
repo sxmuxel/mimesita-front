@@ -68,7 +68,7 @@ import { Reserva, EstadoReserva } from '../../shared/models';
                   <span class="badge badge-{{ r.estado }}">{{ r.estado }}</span>
                 </div>
                 @if (r.ocasionEspecial && r.ocasionEspecial !== 'ninguna') {
-                  <span class="ocasion-tag">🎉 {{ r.ocasionEspecial }}</span>
+                  <span class="ocasion-tag">{{ getOcasionLabel(r.ocasionEspecial) }}</span>
                 }
               </div>
 
@@ -216,4 +216,17 @@ export class ReservasComponent implements OnInit {
     if (typeof r.cliente === 'object') return `${r.cliente.nombre} ${r.cliente.apellido}`;
     return '';
   }
+
+  private ocasiones: Record<string, string> = {
+    cumpleanos: '🎂 Cumpleaños',
+    aniversario: '💑 Aniversario',
+    reunion_negocios: '💼 Reunión de negocios',
+    otra: '🎉 Otra ocasión',
+    ninguna: ''
+  };
+
+  getOcasionLabel(ocasion?: string): string {
+    return ocasion ? (this.ocasiones[ocasion] ?? ocasion) : '';
+  }
+  
 }
