@@ -37,7 +37,7 @@ import { Reserva, Restaurante } from '../../shared/models';
           </div>
           <div class="rest-cap">
             <span class="cap-number">{{ restaurante()!.capacidadTotal }}</span>
-            <span class="cap-label">lugares</span>
+            <span class="cap-label">Aforo Max.</span>
           </div>
         </div>
       }
@@ -144,7 +144,7 @@ import { Reserva, Restaurante } from '../../shared/models';
     .rest-banner { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; gap: 1rem; }
     .rest-info { display: flex; align-items: center; gap: 1rem; }
     .rest-icon { font-size: 2.5rem; }
-    .rest-info h3 { font-family: var(--font-display); margin-bottom: 0.2rem; }
+    .rest-info h3 { font-family: var(--font-body); margin-bottom: 0.2rem; }
     .rest-info p { color: var(--gray-500); font-size: 0.85rem; }
     .rest-cap { text-align: center; }
     .cap-number { display: block; font-size: 2rem; font-weight: 700; color: var(--primary); line-height: 1; }
@@ -154,7 +154,7 @@ import { Reserva, Restaurante } from '../../shared/models';
     .stat-icon { font-size: 1.6rem; margin-bottom: 0.5rem; }
     .stat-num { font-size: 2rem; font-weight: 700; color: var(--gray-900); line-height: 1; }
     .stat-label { font-size: 0.78rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 0.25rem; }
-    .section-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--gray-700); margin: 2rem 0 1rem; }
+    .section-title { font-family: var(--font-body); font-size: 1.1rem; font-weight: 600; color: var(--gray-700); margin: 2rem 0 1rem; }
     .quick-grid { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; }
     .quick-card {
       display: flex; flex-direction: column; align-items: center;

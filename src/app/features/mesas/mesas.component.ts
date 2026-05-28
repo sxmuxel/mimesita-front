@@ -44,12 +44,12 @@ import { environment } from '../../../environments/environment';
         <div class="mesas-visual">
           @for (m of mesasFiltradas(); track m._id) {
             <div class="mesa-vis-card" [class.disponible]="m.disponible" [class.ocupada]="!m.disponible">
-              <div class="mesa-vis-num">{{ m.numero }}</div>
+              <div class="mesa-vis-num">#{{ m.numero }}</div>
               <div class="mesa-vis-info">
-                <span>👥 {{ m.capacidad }}</span>
-                <span class="mesa-vis-loc">{{ m.ubicacion }}</span>
+                <span>Para {{ m.capacidad }} personas en {{ m.ubicacion }} </span>
               </div>
-              <div class="mesa-vis-estado">{{ m.disponible ? '✅ Libre' : '🔴 Ocupada' }}</div>
+              <div class="mesa-vis-estado">{{ m.disponible ? 'Disponible' : 'Ocupada' }}
+              </div>
               <div class="mesa-vis-actions">
                 <button class="btn btn-sm" [class.btn-danger]="m.disponible" [class.btn-success]="!m.disponible"
                         (click)="toggleDisponible(m)">
@@ -126,9 +126,8 @@ import { environment } from '../../../environments/environment';
     }
     .mesa-vis-card.disponible { border-color: var(--success); }
     .mesa-vis-card.ocupada { border-color: var(--danger); opacity: 0.85; }
-    .mesa-vis-num { font-size: 2rem; font-weight: 800; color: var(--gray-800); line-height: 1; margin-bottom: 0.5rem; font-family: var(--font-display); }
+    .mesa-vis-num { font-size: 1.9rem; font-weight: 700; color: var(--gray-700); line-height: 1; margin-bottom: 0.5rem; font-family: var(--font-body); }
     .mesa-vis-info { display: flex; gap: 0.75rem; font-size: 0.8rem; color: var(--gray-500); margin-bottom: 0.5rem; }
-    .mesa-vis-loc { text-transform: capitalize; }
     .mesa-vis-estado { font-size: 0.78rem; font-weight: 600; margin-bottom: 0.75rem; }
     .mesa-vis-actions { display: flex; gap: 0.4rem; flex-wrap: wrap; }
   `]
