@@ -97,9 +97,14 @@ import { RestauranteService } from '../../../core/services/api.service';
     .auth-page { display: flex; min-height: 100vh; }
     .auth-left {
       flex: 1; background: linear-gradient(145deg, var(--primary-dark) 0%, var(--primary) 60%, #3b82f6 100%);
-      display: flex; align-items: center; justify-content: center; padding: 3rem;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      padding: 3rem; color: white; position: relative; overflow: hidden;
     }
-    .auth-brand { text-align: center; color: white; }
+    .auth-left::before {
+      content: ''; position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .auth-brand { text-align: center; position: relative; }
     .auth-brand-icon {
       width: 64px; height: 64px; border-radius: 18px;
       display: inline-flex; align-items: center; justify-content: center;
