@@ -44,7 +44,7 @@ import { RestauranteService } from '../../../core/services/api.service';
             </div>
 
             <div class="form-group">
-              <label class="form-label">Contrasena</label>
+              <label class="form-label">Contraseña</label>
               <div class="input-pw">
                 <input [type]="showPw() ? 'text' : 'password'" formControlName="password"
                        class="form-control"
@@ -55,7 +55,7 @@ import { RestauranteService } from '../../../core/services/api.service';
                 </button>
               </div>
               @if (submitted && form.get('password')?.invalid) {
-                <span class="form-error">Contrasena requerida</span>
+                <span class="form-error">Contraseña requerida</span>
               }
             </div>
 

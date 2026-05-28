@@ -70,7 +70,7 @@ import { RestauranteService } from '../../../core/services/api.service';
             </div>
 
             <div class="form-group">
-              <label class="form-label">Contrasena</label>
+              <label class="form-label">Contraseña</label>
               <input type="password" formControlName="password" class="form-control"
                      [class.is-invalid]="submitted && form.get('password')?.invalid"
                      placeholder="Minimo 6 caracteres">
